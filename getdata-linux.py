@@ -33,7 +33,7 @@ def get_time(str):
 
 def get_data():
 
-	print ('Now Time: '+get_time(driver.page_source))
+	# print ('Now Time: '+get_time(driver.page_source))
 
 	G = get_rest(driver.page_source, 'G层自修室')
 	F2A = get_rest(driver.page_source, 'F2A区')
