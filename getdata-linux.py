@@ -16,7 +16,7 @@ def get_date(str):
 
 def output(Data):
 
-	file_object = open('/record/'+get_date(driver.page_source)+'.txt', 'a', encoding = 'utf-8') # 使用时需修改路径
+	file_object = open('./record/'+get_date(driver.page_source)+'.txt', 'a', encoding = 'utf-8') # 使用时需修改路径
 
 	for i in Data:
 		file_object.write(str(i)+'\t')
