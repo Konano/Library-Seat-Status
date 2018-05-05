@@ -6,9 +6,15 @@ import codecs
 import os
 from splinter import Browser
 
+def get_date(str):
+
+	st = str.index('<span id="Label_time" class="time">')+35
+	ed = str.index(' ', st);
+	return str[st:ed:];
+
 def output(Data):
 
-	file_object = open('record.txt', 'a', encoding = 'utf-8') # 使用时需修改路径
+	file_object = open('record/'+get_date(browser.html)+'.txt', 'a', encoding = 'utf-8') # 使用时需修改路径
 
 	for i in Data:
 		file_object.write(str(i)+'\t')
