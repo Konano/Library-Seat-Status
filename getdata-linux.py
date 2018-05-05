@@ -11,7 +11,7 @@ from pyvirtualdisplay import Display
 def get_date(str):
 
 	st = str.index('<span id="Label_time" class="time">')+35
-	ed = str.index(' ', st);
+	ed = str.index(' ', st)
 	return str[st:ed:];
 
 def output(Data):
@@ -34,6 +34,7 @@ def get_rest(str, lable):
 def get_time(str):
 
 	st = str.index('<span id="Label_time" class="time">')+35
+	st = str.index(' ', st)+1
 	ed = str.index('</span>', st)
 	return str[st:ed:];
 
